@@ -1,0 +1,14 @@
+<%- include('basic.ejs') %>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="/js/tvshows.js"></script>
+<link rel="stylesheet" href="/css/tvshows.css">
+<body>
+    <h1>This are Tv Shows</h1>
+
+    <ol>
+        <% tvseries.forEach(tvserie => { %>
+               <li id="vli" class="list-group-item"> <a href="videoplayer/series/<%= tvserie.id %>"><%= tvserie.name %></a> </li>
+               
+        <% }); %>
+    </ol>
+</body>

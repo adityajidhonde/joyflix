@@ -1,0 +1,12 @@
+body{
+    position: absolute;
+    background-color: black;
+}
+
+h1{
+    color: white;
+}
+
+video {
+    width: 100%;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "joyflix",
+  "main": "app.js",
+  "scripts": {
+    "test": "aditya"
+  },
+  "keywords": [
+    "aditya"
+  ],
+  "author": "Aditya",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-ejs-layouts": "^2.5.1",
+    "express-fileupload": "^1.5.0",
+    "express-session": "^1.18.0",
+    "multer": "^1.4.5-lts.1",
+    "sequelize": "^6.37.3",
+    "sequelize-cockroachdb": "^6.0.5"
+  }
+}

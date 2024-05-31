@@ -1,0 +1,96 @@
+/* Reset some basic styles */
+body, h1, form, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column; /* Center items vertically as well */
+}
+body p{
+    color: white;
+    margin-bottom: 0;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/login.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1; /* Ensure it appears behind the form */
+}
+
+/* Container for the form */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items inside the form */
+}
+
+/* Headline style */
+h1 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Label styles */
+label {
+    align-self: flex-start; /* Align labels to the start of the form */
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Input styles */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Button styles */
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Link styles */
+a {
+    margin-top: 15px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #f50000;
+}

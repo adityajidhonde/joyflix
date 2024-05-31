@@ -1,0 +1,52 @@
+<%- include('basic.ejs') %>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/admin.css"> 
+<script src="/js/admin.js"></script>
+<body>
+    <p>Don't have an account? Register now and get access:</p>
+    <ul>
+        <a href="/register?role=admin">Admin</a>
+    </ul>
+    <h1>Please Select Video type to upload</h1>
+    <input type="radio" name="radiobtn" value="0" onclick="radioSelect(0);">Movies
+    <input type="radio" name="radiobtn" value="1" onclick="radioSelect(1);">Series
+    <div id="moviecont"></div>
+    <h1>Movies Data</h1>
+    <ul class="list-group">
+        <% movies.forEach(movie => { %>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col"><%= movie.name %></div>
+                    <div class="col"><%= movie.genre %></div>
+                    <div class="col"><%= movie.description %></div>
+                    <div class="col"><%= movie.cast %></div>
+                    <div class="col"><%= movie.type %></div>
+                    <div class="col-auto">
+                        <button class="btn btn-danger btn-sm" onclick="deleteSeries('<%= movie.id %>', 'Movies')">Delete</button>
+                    </div>
+                </div>
+            </li>
+        <% }); %>
+    </ul>
+    <h1>Series Data</h1>
+    <ul class="list-group">
+        <% series.forEach(serie => { %>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col"><%= serie.name %></div>
+                    <div class="col"><%= serie.genre %></div>
+                    <div class="col"><%= serie.description %></div>
+                    <div class="col"><%= serie.cast %></div>
+                    <div class="col"><%= serie.type %></div>
+                    <div class="col"><%= serie.no_of_episodes %></div>
+                    <div class="col-auto">
+                        <button class="btn btn-danger btn-sm" onclick="deleteSeries('<%= serie.id %>', 'Series')">Delete</button>
+                    </div>
+                </div>
+            </li>
+        <% }); %>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>

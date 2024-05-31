@@ -1,0 +1,17 @@
+<%- include('basic.ejs') %>
+
+<link rel="stylesheet" href="/css/videoplayer.css">
+<body>
+    
+<h1>This is Video Player</h1>
+
+
+<video id="videoPlayer" width="650" controls muted="muted" autoplay>
+    <source src="/video/<%= type %>/<%= id %>" type="video/mp4" />
+</video>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>

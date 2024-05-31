@@ -1,0 +1,22 @@
+body{
+    background-color: black;
+}
+
+h1{
+    color: white;
+}
+
+#vli{
+    width: 40%;
+    background-color: red;
+    margin: 1%;
+    border-radius: 5px;
+}
+
+#vli a{
+    color: white;
+}
+
+ol {
+    color: white;
+}

@@ -1,0 +1,27 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/loginuser.css">
+    <script src="/js/loginuser.js"></script>
+</head>
+<body>
+    <h1>Login As User</h1>
+    <form action="/user/loginsuccess" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+        <br>
+        <button type="submit">Login</button>
+    </form>
+    <br>
+    <a href="/admin">Log in as Admin</a>
+    <p>Don't have an account? Register now:</p>
+
+    <a href="/register?role=user">User</a>
+
+</body>
+</html>
